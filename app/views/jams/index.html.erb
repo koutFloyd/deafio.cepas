@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="card">
+  <div class="card-header">
+        <h5 class="card-title">Vinos</h5>
+
+  </div>
+  <div class="card-body">
+    <div id="jams">
+    <table class="table table-dark table-striped">
+      <thead >
+        <tr>
+          <th>Nombre</th>
+          <th>user</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
+      <% @jams.each do |jam| %>
+        
+        <tr>
+          <td><%= jam.name%></td>
+          <td><%= jam.user_id%></td>
+          <td><%= link_to "Ver Vino", jam %></td>
+        </tr>
+        
+      <% end %>
+      </table>
+    </div>
+
+    <%= link_to "Nuevo Vino", new_jam_path, class: "btn btn-primary" %>
+
+    
+  </div>
+</div>
