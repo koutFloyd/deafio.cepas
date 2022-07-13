@@ -72,6 +72,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+group :production do
+    gem "pg"
+end
 
 # GReenDucK_cl: requisitos para activar bootstrap
 
@@ -80,3 +83,5 @@ end
     gem "sassc-rails"
 
     gem "rest-client"
+
+    
